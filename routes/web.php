@@ -14,6 +14,9 @@ use Illuminate\Support\Facades\Route;
 */
 
 //Route thang qua view
-Route::get('/', function () {
-    return view('pages/home');
-});
+Route::get('/', function () {return view('pages/home');});
+Route::get('/home', function () {return view('pages/home');});
+Route::get('/bicycles', function () {return view('pages/bicycles');});
+// Route::get('/', function () {return view('pages/home');});
+// Route::get('/', function () {return view('pages/home');});
+// Route::get('/', function () {return view('pages/home');});

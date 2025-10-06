@@ -1,4 +1,3 @@
-
 <div class="banner-bg banner-bg1">	
 	  <div class="container">
 			 <div class="header">
@@ -11,7 +10,7 @@
 						</label>
 						<input id="mobile_menu" type="checkbox">
 					   <ul class="nav">
-						  <li class="dropdown1"><a href="bicycles.html">BICYCLES</a>
+						  <li class="dropdown1"><a href="/bicycles">BICYCLES</a>
 							  <ul class="dropdown2">
 									<li><a href="bicycles.html">FIXED / SINGLE SPEED</a></li>
 									<li><a href="bicycles.html">CITY BIKES</a></li>
