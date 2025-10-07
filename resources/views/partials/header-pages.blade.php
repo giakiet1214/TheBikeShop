@@ -1,8 +1,20 @@
+<script src="{{ asset('userAsset/js/responsiveslides.min.js')}}"></script>
+<script>  
+    $(function () {
+      $("#slider").responsiveSlides({
+      	auto: false,
+      	nav: true,
+      	speed: 500,
+        namespace: "callbacks",
+        pager: true,
+      });
+    });
+  </script>
 <div class="banner-bg banner-sec">	
 	  <div class="container">
 			 <div class="header">
 			       <div class="logo">
-						 <a href="index.html"><img src="images/logo.png" alt=""/></a>
+						 <a href="index.html"><img src="{{ asset('userAsset/images/logo.png')}}" alt=""/></a>
 				   </div>							 
 				  <div class="top-nav">										 
 						<label class="mobile_menu" for="mobile_menu">
@@ -40,7 +52,7 @@
 									<li><a href="404.html">TRUCK GRIP</a></li>
 							  </ul>
 						 </li>
-						  <a class="shop" href="cart.html"><img src="images/cart.png" alt=""/></a>
+						  <a class="shop" href="cart.html"><img src="{{ asset('userAsset/images/cart.png')}}" alt=""/></a>
 					  </ul>
 				 </div>
 				 <div class="clearfix"></div>
