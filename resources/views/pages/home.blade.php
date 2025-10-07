@@ -32,11 +32,13 @@
 		 {{-- danh sach san pham lap lai--}}
 		 <div class="bikes-grids">			 
 			 <ul id="flexiselDemo1">
-				 <li>
-					 <img src="images/bik1.jpg" alt=""/>
+				@foreach ($products as $bike)
+					<li>
+					 {{-- <h4>{{$bike->anh}}</h4> --}}
+					 <img src="{{asset('userAsset/images/'.$bike->anh)}}" alt=""/>
 					 <div class="bike-info">
 						 <div class="model">
-							 <h4>FIXED GEAR<span>$249.00</span></h4>							 
+							 <h4>{{$bike->tensp}}<span>{{'$'.$bike->giaban}}</span></h4>							 
 						 </div>
 						 <div class="model-info">
 						     <select>
@@ -53,111 +55,7 @@
 						<a href="bicycles.html">Quick View</a>
 					 </div>
 				 </li>
-				 <li>
-				 <img src="images/bik2.jpg" alt=""/>
-				 <div class="bike-info">
-						 <div class="model">
-							 <h4>BIG BOY ULTRA<span>$249.00</span></h4>							 
-						 </div>
-						 <div class="model-info">
-						     <select>
-							  <option value="volvo">OPTION</option>
-							  <option value="saab">Option</option>
-							  <option value="opel">Option</option>
-							  <option value="audi">Option</option>
-							 </select>
-							 <a href="bicycles.html">BUY</a>
-						 </div>						 
-						 <div class="clearfix"></div>
-					 </div>
-					 <div class="viw">
-						<a href="bicycles.html">Quick View</a>
-					 </div>
-				 </li>
-				 <li>
-					 <img src="images/bik3.jpg" alt=""/>
-					 <div class="bike-info">
-						 <div class="model">
-							 <h4>ROCK HOVER<span>$300.00</span></h4>							 
-						 </div>
-						 <div class="model-info">
-						     <select>
-							  <option value="volvo">OPTION</option>
-							  <option value="saab">Option</option>
-							  <option value="opel">Option</option>
-							  <option value="audi">Option</option>
-							 </select>
-							 <a href="bicycles.html">BUY</a>
-						 </div>						 
-						 <div class="clearfix"></div>
-					 </div>
-					 <div class="viw">
-						<a href="bicycles.html">Quick View</a>
-					 </div>
-				 </li>
-				 <li>
-				     <img src="images/bik4.jpg" alt=""/>
-					 <div class="bike-info">
-						 <div class="model">
-							 <h4>SANSACHG<span>$249.00</span></h4>							 
-						 </div>
-						 <div class="model-info">
-						     <select>
-							  <option value="volvo">OPTION</option>
-							  <option value="saab">Option</option>
-							  <option value="opel">Option</option>
-							  <option value="audi">Option</option>
-							 </select>
-							 <a href="bicycles.html">BUY</a>
-						 </div>						 
-						 <div class="clearfix"></div>
-					 </div>
-					 <div class="viw">
-						<a href="bicycles.html">Quick View</a>
-					 </div>
-				 </li>
-				 <li>
-					 <img src="images/bik5.jpg" alt=""/>
-					 <div class="bike-info">
-						 <div class="model">
-							 <h4>JETT MAC<span>$340.00</span></h4>							 
-						 </div>
-						 <div class="model-info">
-						     <select>
-							  <option value="volvo">OPTION</option>
-							  <option value="saab">Option</option>
-							  <option value="opel">Option</option>
-							  <option value="audi">Option</option>
-							 </select>
-							 <a href="bicycles.html">BUY</a>
-						 </div>						 
-						 <div class="clearfix"></div>
-					 </div>
-					 <div class="viw">
-						<a href="bicycles.html">Quick View</a>
-					 </div>
-				 </li>
-				 <li>
-				      <img src="images/bik6.jpg" alt=""/>
-					  <div class="bike-info">
-						 <div class="model">
-							 <h4>SANSACHG<span>$249.00</span></h4>							 
-						 </div>
-						 <div class="model-info">
-						     <select>
-							  <option value="volvo">OPTION</option>
-							  <option value="saab">Option</option>
-							  <option value="opel">Option</option>
-							  <option value="audi">Option</option>
-							 </select>
-							 <a href="bicycles.html">BUY</a>
-						 </div>						 
-						 <div class="clearfix"></div>
-					 </div>
-					 <div class="viw">
-						<a href="bicycles.html">Quick View</a>
-					 </div>
-				 </li>
+				@endforeach
 		    </ul>
 			<script type="text/javascript">
 			 $(window).load(function() {			
@@ -185,7 +83,7 @@
 			});
 			});
 			</script>
-			<script type="text/javascript" src="js/jquery.flexisel.js"></script>			 
+			<script type="text/javascript" src="{{ asset('userAsset/js/jquery.flexisel.js')}}"></script>			 
 	</div>
 </div>
 @endsection
