@@ -36,3 +36,4 @@ Route::get('/bicycles', function () {return view('pages/bicycles');});
 Route::get('/cart', function () {return view('pages/cart');});
 Route::get('/parts', function () {return view('pages/parts');});
 Route::get('/single', function () {return view('pages/single');});
+Route::get('/contact', function () {return view('pages/contact');});
