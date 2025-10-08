@@ -25,11 +25,14 @@ Route::get('/check-db', function () {
 });
 // Route thang qua controller
 Route::get('/', [HomeController::class, 'index']);
+Route::get('/home', [HomeController::class, 'index']);
+
+// Route trang 404 khi url sai
+Route::fallback( function () {return view('pages/404');});
 
 //Route thang qua view
-//Route::get('/', function () {return view('pages/home');});
-Route::get('/home', function () {return view('pages/home');});
 Route::get('/bicycles', function () {return view('pages/bicycles');});
-// Route::get('/', function () {return view('pages/home');});
-// Route::get('/', function () {return view('pages/home');});
-// Route::get('/', function () {return view('pages/home');});
+Route::get('/bicycles', function () {return view('pages/bicycles');});
+Route::get('/bicycles', function () {return view('pages/bicycles');});
+Route::get('/bicycles', function () {return view('pages/bicycles');});
+Route::get('/bicycles', function () {return view('pages/bicycles');});

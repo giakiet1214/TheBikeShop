@@ -1,7 +1,7 @@
 <div class="footer">
 	 <div class="container wrap">
 		<div class="logo2">
-			 <a href="index.html"><img src="images/logo2.png" alt=""/></a>
+			 <a href="index.html"><img src="{{asset('userAsset/images/logo2.png')}}" alt=""/></a>
 		</div>
 		<div class="ftr-menu">
 			 <ul>
