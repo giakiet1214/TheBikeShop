@@ -31,8 +31,8 @@ Route::get('/home', [HomeController::class, 'index']);
 Route::fallback( function () {return view('pages/404');});
 
 //Route thang qua view
+Route::get('/accessories', function () {return view('pages/accessories');});
 Route::get('/bicycles', function () {return view('pages/bicycles');});
-Route::get('/bicycles', function () {return view('pages/bicycles');});
-Route::get('/bicycles', function () {return view('pages/bicycles');});
-Route::get('/bicycles', function () {return view('pages/bicycles');});
-Route::get('/bicycles', function () {return view('pages/bicycles');});
+Route::get('/cart', function () {return view('pages/cart');});
+Route::get('/parts', function () {return view('pages/parts');});
+Route::get('/single', function () {return view('pages/single');});
