@@ -3,6 +3,9 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\DB;
+use App\Http\Controllers\ProductController;
+use App\Http\Controllers\ProductCategoryController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -26,6 +29,13 @@ Route::get('/check-db', function () {
 // Route thang qua controller
 Route::get('/', [HomeController::class, 'index']);
 Route::get('/home', [HomeController::class, 'index']);
+
+//gọi hàm thêm sản phẩm mới từ controller (09/10/2025) phuoc
+Route::post('/addproduct', [ProductController::class, 'addproduct'])->name('addproduct');
+
+//gọi hàm thêm danh mục sản phẩm (09/10/2025) phuoc
+Route::post('/adddanhmuc', [ProductCategoryController::class, 'adddanhmuc'])->name('adddanhmuc');
+
 
 // Route trang 404 khi url sai
 Route::fallback( function () {return view('pages/404');});
