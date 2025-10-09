@@ -7,14 +7,14 @@ use App\Models\Product;
 use Illuminate\Support\Str;
 use App\Models\Danhmuc;
 
-class ProductController extends Controller
+class AddProductController extends Controller
 {
     public function index() {
         $products = Product::all(); // lấy tất cả sản phẩm trong bảng sanpham
         //return view('customer.product', compact('products'));
     }
 // hàm thêm sản phẩm mới (09/10/2025)phuoc
-    function addproduct(Request $request) {    
+    function addProduct(Request $request) {    
         $extension = $request->file('anh')->getClientOriginalExtension(); // lấy phần mở rộng của file   
         $fileName = Str::slug($request->input('masp'), '-', ($request->input('madm')) ). '.' . $extension;//phần slug dùng để tạo 1 tên ảnh theo masp và danh muc
         $request->file('anh')->move(public_path('images'), $fileName);// move() or store: dùng để lưu ảnh vào thư mục ở đây move sẽ lưu ảnh vào thư mục public/images với tên như filename đã tạo phái trên

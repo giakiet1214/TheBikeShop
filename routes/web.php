@@ -3,8 +3,8 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\DB;
-use App\Http\Controllers\ProductController;
-use App\Http\Controllers\ProductCategoryController;
+use App\Http\Controllers\AddProductController;
+use App\Http\Controllers\AddProductCategoryController;
 
 /*
 |--------------------------------------------------------------------------
@@ -31,10 +31,10 @@ Route::get('/', [HomeController::class, 'index']);
 Route::get('/home', [HomeController::class, 'index']);
 
 //gọi hàm thêm sản phẩm mới từ controller (09/10/2025) phuoc
-Route::post('/addproduct', [ProductController::class, 'addproduct'])->name('addproduct');
+Route::post('/add-product', [AddProductController::class, 'addProduct'])->name('addproduct');
 
 //gọi hàm thêm danh mục sản phẩm (09/10/2025) phuoc
-Route::post('/adddanhmuc', [ProductCategoryController::class, 'adddanhmuc'])->name('adddanhmuc');
+Route::post('/add-product-category', [AddProductCategoryController::class, 'addProductCategory'])->name('addproductcategory');
 
 
 // Route trang 404 khi url sai
