@@ -4,7 +4,6 @@
 
 @section('content')											
 							
-cart
 <div class="cart">
 	 <div class="container">
 		 <div class="cart-top">

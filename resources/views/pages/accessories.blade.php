@@ -3,7 +3,6 @@
 @section('title','Accessories')
 
 @section('content')
-Accessories
 <div class="parts">
 	 <div class="container">
 		 <h2>BIKE-ACCESSORIES</h2>
