@@ -3,8 +3,10 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\DB;
+//Khai bao controller
 use App\Http\Controllers\AddProductController;
 use App\Http\Controllers\AddProductCategoryController;
+use App\Http\Controllers\AdminLoginColltroller;
 
 /*
 |--------------------------------------------------------------------------
@@ -47,3 +49,11 @@ Route::get('/cart', function () {return view('pages/cart');});
 Route::get('/parts', function () {return view('pages/parts');});
 Route::get('/single', function () {return view('pages/single');});
 Route::get('/contact', function () {return view('pages/contact');});
+
+//Route cho admin
+Route::get('/admin/dangnhap',[AdminLoginColltroller::class,'index']);
+Route::post('/admin/dangnhap',[AdminLoginColltroller::class,'login']);
+Route::middleware('CheckAdLoginStatus')->group(function(){
+    Route::get('/admin/dashboard',[AdminLoginColltroller::class, 'dashboard']);//test
+    Route::get('/admin/dangxuat',[AdminLoginColltroller::class, 'logout']);
+});
