@@ -49,7 +49,7 @@ Route::get('/cart', function () {return view('pages/cart');});
 Route::get('/parts', function () {return view('pages/parts');});
 Route::get('/single', function () {return view('pages/single');});
 Route::get('/contact', function () {return view('pages/contact');});
-
+//không thể tới view thông qua các route trên xin hãy chỉnh sửa (xóa dòng này khi đã khắc phục)
 //Route cho admin
 Route::get('/admin/dangnhap',[AdminLoginColltroller::class,'index']);
 Route::post('/admin/dangnhap',[AdminLoginColltroller::class,'login']);
