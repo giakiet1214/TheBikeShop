@@ -10,7 +10,8 @@
       });
     });
   </script>
-<div class="banner-bg banner-bg1">	
+  <div class="{{ ($isPageHome)? 'banner-bg banner-bg1' : 'banner-bg banner-sec'}}">
+{{--<div class="banner-bg banner-bg1"></div> --}}
 	  <div class="container">
 			 <div class="header">
 			       <div class="logo">
@@ -49,6 +50,8 @@
 							 <ul class="dropdown2">
 									<li><a href="404.html">CLASSIC BELL</a></li>
 									<li><a href="/contact">CONTACT</a></li>
+									<li><a href="/log-in">LOG IN</a></li>
+									<li><a href="/sign-up">SIGN UP</a></li>
 									<li><a href="404.html">BOTTLE CAGE</a></li>
 									<li><a href="404.html">TRUCK GRIP</a></li>
 							  </ul>
@@ -58,8 +61,9 @@
 				 </div>
 				 <div class="clearfix"></div>
 			 </div>
-	  </div>	 
-	 <div class="caption">
+	  </div>
+	@if ($isPageHome)
+	  <div class="caption">
 		 <div class="slider">
 					   <div class="callbacks_container">
 						   <ul class="rslides" id="slider">
@@ -73,6 +77,7 @@
 				  </div>
 	 </div>
 	 <div class="dwn">
-		<a class="scroll" href="#cate"><img src="{{ asset('userAsset/images/scroll.png')}}" alt=""/></a>
-	 </div>				 
-</div>
+		<a class="scroll" href="#cate"><img src=" {{ asset('userAsset/images/scroll.png')}}" alt=""/></a>
+	 </div>	
+	@endif
+	</div>
