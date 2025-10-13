@@ -49,6 +49,8 @@
 							 <ul class="dropdown2">
 									<li><a href="404.html">CLASSIC BELL</a></li>
 									<li><a href="/contact">CONTACT</a></li>
+									<li><a href="/log-in">LOG IN</a></li>
+									<li><a href="/sign-up">SIGN UP</a></li>
 									<li><a href="404.html">BOTTLE CAGE</a></li>
 									<li><a href="404.html">TRUCK GRIP</a></li>
 							  </ul>

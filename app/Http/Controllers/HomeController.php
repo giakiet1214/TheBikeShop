@@ -13,7 +13,7 @@ class HomeController extends Controller
         //return response()->json($products);
 
         //truyen 6 xe dap vao view
-        return view('pages/home', compact('products'));
+        return view('userViews/pages/home', compact('products'));
     }
     
 
