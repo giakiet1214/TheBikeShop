@@ -40,15 +40,19 @@ Route::post('/add-product-category', [AddProductCategoryController::class, 'addP
 
 
 // Route trang 404 khi url sai
-Route::fallback( function () {return view('pages/404');});
+Route::fallback( function () {return view('userViews/pages/404');});
 
 //Route thang qua view
-Route::get('/accessories', function () {return view('pages/accessories');});
-Route::get('/bicycles', function () {return view('pages/bicycles');});
-Route::get('/cart', function () {return view('pages/cart');});
-Route::get('/parts', function () {return view('pages/parts');});
-Route::get('/single', function () {return view('pages/single');});
-Route::get('/contact', function () {return view('pages/contact');});
+Route::get('/accessories', function () {return view('userViews/pages/accessories');});
+Route::get('/bicycles', function () {return view('userViews/pages/bicycles');});
+Route::get('/cart', function () {return view('userViews/pages/cart');});
+Route::get('/parts', function () {return view('userViews/pages/parts');});
+Route::get('/single', function () {return view('userViews/pages/single');});
+Route::get('/contact', function () {return view('userViews/pages/contact');});
+Route::get('/log-in', function () {return view('userViews/pages/log-in');});
+Route::get('/sign-up', function () {return view('userViews/pages/sign-up');});
+
+
 //không thể tới view thông qua các route trên xin hãy chỉnh sửa (xóa dòng này khi đã khắc phục)
 //Route cho admin
 Route::get('/admin/dangnhap',[AdminLoginColltroller::class,'index']);
