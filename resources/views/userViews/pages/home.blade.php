@@ -1,4 +1,4 @@
-@extends('layout.app')
+@extends('userViews.layout.app')
 
 @section('title','Home')
 
@@ -87,4 +87,5 @@
 	</div>
 </div>
 @endsection
+<!--giao diện trang chủ hiển thị tốt, cải thiện hiển thị khi thu giao diện về kích thước điện thoại nếu có thể -->
     

@@ -1,5 +1,4 @@
 {{-- Day la phan file goc, moi file giao dien cua trang nguoi dung deu dung trang nay--}}
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -43,18 +42,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 {{-- Phan noi dung can chen se o day --}}
 {{-- Header --}}
 <header>
-	{{--Tuy chon header cho phu hop voi page--}}
-	@if ((request()->is('/'))||(request()->is('home')))
-		{{--
-		request(): tra ve mot doi tuong request
-		->: goi thuoc tinh hoac phuong thuc cua 1 doi tuong
-		is(): so sanh url hien tai cua doi tuong voi url truyen vao, dung tra ve true, sai tra ve false
-		--}}
-		@include('partials.header-home')
-	@else
-		@include('partials.header-pages')
-	@endif
+	@php
+	((request()->is('/'))||(request()->is('home')))? $isPageHome=true : $isPageHome=false
+	@endphp
+	@include('userViews.partials.header-home',[$isPageHome])
 </header>
+	
 
 {{-- content --}}
 @yield('content')
@@ -62,7 +55,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 {{-- Footer --}}
 <footer>
-	@include('partials.footer')
+	@include('userViews.partials.footer')
 </footer>
 </body>
 </html>

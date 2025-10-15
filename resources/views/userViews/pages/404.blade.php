@@ -1,4 +1,4 @@
-@extends('layout.app')
+@extends('userViews.layout.app')
 
 @section('title','404')
 
@@ -9,7 +9,7 @@
 			 <h1>4<label>0</label>4</h1>
 			 <span>ERROR</span>
 			 <h2>Ooops....!This page is not found.</h2>
-			 <a href="index.html">Go Back</a>
+			 <a href="/">Go Back</a>
 		 </div>
 	 </div>
 </div>

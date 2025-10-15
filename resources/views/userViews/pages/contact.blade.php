@@ -1,4 +1,4 @@
-@extends('layout.app')
+@extends('userViews.layout.app')
 
 @section('title','Contact')
 
@@ -17,3 +17,10 @@
 	</div>
 </div>
 @endsection
+<!--giao diện ổn 
+cần cải thiện kiểm tra tính hợp hệ ở ô name và surname không được điền số.
+cần cải thiện thêm tính năng không được bỏ trống ở ô tin nhắn.
+cần cải thiện ở ô email : không hợp lệ khi không có dấu @. 
+sửa nếu có thể
+(15/10/2025 trongphuc)
+-->
