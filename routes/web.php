@@ -51,9 +51,9 @@ Route::get('/single', function () {return view('userViews/pages/single');});
 Route::get('/contact', function () {return view('userViews/pages/contact');});
 Route::get('/log-in', function () {return view('userViews/pages/log-in');});
 Route::get('/sign-up', function () {return view('userViews/pages/sign-up');});
+//các route hoạt động bình thường (test 15/10/2025 by trongphuc)
 
 
-//không thể tới view thông qua các route trên xin hãy chỉnh sửa (xóa dòng này khi đã khắc phục)
 //Route cho admin
 Route::get('/admin/dangnhap',[AdminLoginColltroller::class,'index']);
 Route::post('/admin/dangnhap',[AdminLoginColltroller::class,'login']);
